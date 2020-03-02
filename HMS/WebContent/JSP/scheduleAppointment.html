@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../style/main_new.css">
+  <link rel="stylesheet" type="text/css" href="../style/subpage.css">
+  <link rel="stylesheet" type="text/css" href="../style/customer.css">
+  <!--  <link rel="stylesheet" type="text/css" href="../style/themes.css"> -->
+  <link rel="stylesheet" type="text/css" href="../style/header.css">
+  <script src="../js/cookies.js"></script>
+  <script src="../js/themes.js"></script>
+</head>
+<body>
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+window.__lc = window.__lc || {};
+window.__lc.license = 10278297;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+<noscript>
+<a href="https://www.livechatinc.com/chat-with/10278297/">Chat with us</a>,
+powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener" target="_blank">LiveChat</a>
+</noscript>
+<!-- End of LiveChat code -->
+
+
+<!-- navbar -->  
+	<nav class="navbar navbar-expand-lg fixed-top ">  
+		<a class="navbar-brand" href="patientHome.jsp"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			<ul class="navbar-nav mr-4">
+				<li class="nav-item">
+				     <a class="nav-link" data-value="about" href="patientHome.jsp">Home</a>
+				</li>  
+				<li class="nav-item">
+				    <a class="nav-link " data-value="doctors" href="scheduleAppointment.html">Doctors</a>    
+				</li>
+				<li class="nav-item"> 
+				    <a class="nav-link " data-value="providers" href="insurance.html">Insurance Providers</a>
+				</li>   
+				<li class="nav-item">  
+				   <a class="nav-link " data-value="team" href="userAppointments.jsp">My Appointments</a>
+				</li>  
+				<li class="nav-item"> 
+				 <a class="nav-link " data-value="contact" href="logout.jsp">Sign Out</a>
+				</li> 
+			</ul> 
+		</div>
+	</nav>
+
+<form id="DoctorSearch" class="center-block-element account-form">     
+<div class=middle >
+<h1>Book Appointment</h1>
+<table>
+<tr>
+<td>
+<p>Pet</p>
+</td><br><br>
+<td>
+  <select id="pettype "name="pettype">
+  <option value="Dog">Dog</option>
+  <option value="Cat">Cat</option> 
+</select>
+</td>
+
+<td>
+<p>Speciality</p>
+</td>
+<td>
+<select id="specialisation" name="specialisation">
+  <option value="Anaesthesiology">Anaesthesiology</option>
+  <option value="AnimalBehavior">Animal Behavior</option>
+  <option value="Cardiology">Cardiology</option>
+  <option value="ClinicalPathology">Clinical Pathology</option>
+  <option value="Dentistry">Dentistry</option>
+  <option value="DiagnosticImaging">Diagnostic Imaging</option>
+  <option value="Emergency">Emergency and Critical Care</option>
+  <option value="InternalMedicine">Internal Medicine</option>
+  <option value="Nutrition">Nutrition</option>
+  <option value="Orthopaedics">Orthopaedics</option>
+  <option value="Radiology">Radiology</option>
+  <option value="Toxicology">Toxicology</option>
+  <option value="Dermatology">Dermatology Skin Diseases</option>
+  <option value="Surgery">Surgery</option> 
+</select>
+</td>
+<td>
+<input type="submit" value="Search" class="button">
+</td>
+
+</tr>
+</table>
+</div> 
+</form>
+
+<script src="../js/div-radio.js"></script>
+<script src="../js/doctorSearchAppointment.js"></script>
+
+<!--<form action="checkAppointment.jsp">-->
+<form id="TimeSlotForm">
+	<div id="DoctorTable"><!-- doctorTable.jsp is injected here --></div>
+</form>  
+<form action="bookAppointment.jsp" method="post">
+	<div id="TimeSlotTable"><!-- TimeSlots.jsp injected here --></div>
+</form>
+
+
+
+<!-- Posts section -->
+
+		<div class="services" id="services">
+			<div class="container">
+			<h1 class="text-center">Our Services</h1>
+				<div class="row">
+					<div class="col-md-4 col-lg-4 col-sm-12">
+						<div class="card">
+							<div class="card-img">
+								<img src="../pics/vet2.jpg" class="img-fluid">
+							</div>
+							
+							<div class="card-body">
+							<h4 class="card-title">Search Doctors</h4>
+								<p class="card-text">
+									
+									Find vets with various specializations and book an appointment with them instantly.
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="scheduleAppointment.html" class="card-link">See more</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-4 col-sm-12">
+						<div class="card">
+							<div class="card-img">
+								<img src="../pics/insurance.jpg" class="img-fluid">
+							</div>
+							
+							<div class="card-body">
+							   <h4 class="card-title">Insurance providers</h4>
+								<p class="card-text">
+									
+
+									Pet insurance protects your four-legged family members.
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="" class="card-link">See more</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-4 col-sm-12">
+						<div class="card">
+							<div class="card-img">
+								<img src="../pics/map.jpg" class="img-fluid">
+							</div>
+							
+							<div class="card-body">
+							<h4 class="card-title">Hospital Locator</h4>
+								<p class="card-text">
+									
+									Wondering about nearby vets? They are just a click away.
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="" class="card-link">See more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- add Javasscript file from js file -->
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src='../js/main.js'></script>
+
+
+</body>
+</html> 
+ 

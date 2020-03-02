@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+  <link rel="stylesheet" type="text/css" href="../style/subpage.css">
+  <link rel="stylesheet" type="text/css" href="../style/customer.css">
+  
+  <!--  <link rel="stylesheet" type="text/css" href="../style/themes.css">-->
+  <script src="../js/cookies.js"></script>
+  <script src="../js/themes.js"></script>
+</head>
+<body>
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+window.__lc = window.__lc || {};
+window.__lc.license = 10278297;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+<noscript>
+<a href="https://www.livechatinc.com/chat-with/10278297/">Chat with us</a>,
+powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener" target="_blank">LiveChat</a>
+</noscript>
+<!-- End of LiveChat code -->
+<div id="mySidenav" class="sidenav">
+  <!--  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+  <a href="homepage.html">Home</a>
+  <a href="viewProfile.jsp">Profile</a>
+  <a href="searchDoctors.html">Doctors</a>
+  <a href="scheduleAppointment.html">Appointment</a>
+  <a href="searchPlans.html">Insurance</a>
+  <a href="#">Emergency</a>
+  <a href="Locator.html">Hospital Locator</a>
+  <a href="contactus.html">Contact Us</a>
+  <a href="logout.jsp">Log Out</a>
+</div>
+
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<form id="DoctorSearch2" class="center-block-element account-form">     
+<div class=middle>
+<p>Select Pet Type</p>
+<select id="pettype "name="pettype">
+  <option value="Dog">Dog</option>
+  <option value="Cat">Cat</option>
+</select>
+<p>Select Speciality</p>
+<select id="specialisation" name="specialisation">
+  <option value="Anaesthesiology">Anaesthesiology</option>
+  <option value="AnimalBehavior">Animal Behavior</option>
+  <option value="Cardiology">Cardiology</option>
+  <option value="ClinicalPathology">Clinical Pathology</option>
+  <option value="Dentistry">Dentistry</option>
+  <option value="DiagnosticImaging">Diagnostic Imaging</option>
+  <option value="Emergency">Emergency and Critical Care</option>
+  <option value="InternalMedicine">Internal Medicine</option>
+  <option value="Nutrition">Nutrition</option>
+  <option value="Orthopaedics">Orthopaedics</option>
+  <option value="Radiology">Radiology</option>
+  <option value="Toxicology">Toxicology</option>
+  <option value="Dermatology">Dermatology Skin Diseases</option>
+  <option value="Surgery">Surgery</option> 
+</select><br>
+
+<input type="submit" value="Search">
+</div> 
+</form>
+
+<script src="../js/div-radio.js"></script>
+<script src="../js/doctorSearch.js"></script>  
+<form id="TimeSlotForm">
+	<div id="DoctorTableSearch"><!-- doctorTableSearch.jsp is injected here --></div>
+</form>  
+</body>
+</html> 
+ 

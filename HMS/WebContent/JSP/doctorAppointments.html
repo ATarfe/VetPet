@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+  <link rel="stylesheet" type="text/css" href="../style/subpage.css">
+  <link rel="stylesheet" type="text/css" href="../style/customer.css">
+  
+  <link rel="stylesheet" type="text/css" href="../style/themes.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../style/main_new.css">
+  <script src="../js/cookies.js"></script>
+  <script src="../js/themes.js"></script>
+</head>
+<body>
+
+<!-- navbar -->  
+	<nav class="navbar navbar-expand-lg fixed-top ">  
+		<a class="navbar-brand" href="doctorHome.jsp"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			<ul class="navbar-nav mr-4">
+				<li class="nav-item">
+				     <a class="nav-link" data-value="about" href="doctorHome.jsp">Home</a>
+				</li>  
+				
+				<li class="nav-item"> 
+				    <a class="nav-link " data-value="providers" href="#">Insurance Providers</a>
+				</li>   
+				<li class="nav-item">  
+				   <a class="nav-link " data-value="team" href="myappointments.html">My Appointments</a>
+				</li>  
+				<li class="nav-item"> 
+				 <a class="nav-link " data-value="contact" href="logout.jsp">Logout</a>
+				</li> 
+			</ul> 
+		</div>
+	</nav>
+<div id="mySidenav" class="sidenav">
+  <!--  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+  <a href="doctorhomepage.html">Home</a>
+  <a href="viewProfile.jsp">My Profile</a>
+  <a href="#">View my appointments</a>
+  <a href="#">View my patients</a>
+  <a href="searchProvider.html">Search Provider</a>
+  <a href="#">Emergency</a>
+  <a href="Locator.html">Hospital Locator</a>
+  <a href="contactus.html">Contact Us</a>
+  <a href="logout.jsp">Log Out</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<script>
+	window.onload = function() {
+	var patientSearchForm = document.getElementById("PatientSearch");
+	patientSearchForm.onsubmit = function (e) {
+		e.preventDefault();
+		
+		var dateInput = document.getElementById("DateInput");
+		
+		var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200) {
+                var appointmentTableElement = document.getElementById("AppointmentTable");
+            	appointmentTableElement.innerHTML = this.responseText;
+            }
+        };
+
+        xhttp.open("POST", "viewAppointmentTable.jsp", true);
+        //Tell that post inputs are coming then send them
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        var inputStr = "date="+dateInput.value;
+        xhttp.send(inputStr);
+        
+        return false;
+	};
+	};
+</script>
+
+<form id="PatientSearch" class="center-block-element account-form">     
+<div class=middle>
+<p>Select Date<p>
+<input id="DateInput" type="date" name="date">
+<input type="submit" value="Search my appointments">
+</div> 
+</form>
+
+<div id="AppointmentTable"></div>
+
+</body>
+</html> 
+ 

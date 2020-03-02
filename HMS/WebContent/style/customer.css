@@ -1,0 +1,51 @@
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    position: relative;
+    padding-left: 300px;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #565555;
+    color: white;
+    width: 15%;
+}
+/** The tr:nth-child(even) needs a .selected equivalent otherwise not recolor when selected:**/
+#customers tr:nth-child(even).selected {
+	background-color: #999;
+}
+
+#customers .selected {
+	background-color: #bbb;
+}
+.radio-group
+{
+	padding-top: 100px;
+}
+
+
+.button {
+    background-color: #3498DB;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
